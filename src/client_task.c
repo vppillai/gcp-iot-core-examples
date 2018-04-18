@@ -148,6 +148,21 @@ static void client_publish_message(MQTTClient* mqtt_client)
 /** \brief Receive and process a message from the host */
 static void client_process_message(MessageData *data)
 {
+	printf("received config: %.*s\r\n",data->message->payloadlen,(char*)data->message->payload);
+	if(0==strncmp("LEDOn",(char*)data->message->payload,data->message->payloadlen)){
+		#if BOARD == SAMG55_XPLAINED_PRO
+		ioport_set_pin_level(LED_0_PIN, IOPORT_PIN_LEVEL_LOW);
+		#elif BOARD == SAMD21_XPLAINED_PRO
+		port_pin_set_output_level(LED_0_PIN, false);
+		#endif
+	}
+	else if(0==strncmp("LEDOff",(char*)data->message->payload,data->message->payloadlen)){
+		#if BOARD == SAMG55_XPLAINED_PRO
+		ioport_set_pin_level(LED_0_PIN, IOPORT_PIN_LEVEL_HIGH);
+		#elif BOARD == SAMD21_XPLAINED_PRO
+		port_pin_set_output_level(LED_0_PIN, true);
+		#endif
+	}
 #ifdef CONFIG_USE_JSON_LIB
     JSON_Value *json_message_value = NULL;
     JSON_Object *json_message_object = NULL;
@@ -313,6 +328,9 @@ static int client_subscribe(void* pCtx)
         CLIENT_PRINTF("Failed to load the subscription topic name");
         return status;
     }
+	else{
+		printf("subscribed to : %s\r\n",ctx->sub_topic);
+	}
 
     status = MQTTSubscribe(&ctx->mqtt_client, ctx->sub_topic, QOS1, &client_process_message);
 

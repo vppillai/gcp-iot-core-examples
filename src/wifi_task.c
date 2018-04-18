@@ -43,6 +43,9 @@
 #include "driver/include/m2m_periph.h"
 #include "driver/include/m2m_ssl.h"
 #include "driver/include/m2m_types.h"
+#if BOARD == SAMG55_XPLAINED_PRO
+#include "led.h"
+#endif
 
 #ifdef CONFIG_WIFI_DEBUG
 #define WIFI_PRINTF(f, ...)  printf(f, ##__VA_ARGS__)
@@ -118,8 +121,8 @@ static void wifi_state_update(void* ctx, uint32_t next, uint32_t wait)
 {
     struct _g_wifi_context * pCtx = ctx;
 
-    WIFI_PRINTF("%s(%u) -> %s(%u)\r\n", tiny_state_name(ctx, pCtx->state.state), 
-        pCtx->state.state, tiny_state_name(ctx, next), next);
+    //WIFI_PRINTF("%s(%u) -> %s(%u)\r\n", tiny_state_name(ctx, pCtx->state.state), 
+    //    pCtx->state.state, tiny_state_name(ctx, next), next);
 
     /* Set the new state */
     tiny_state_update(ctx, next);
@@ -352,6 +355,12 @@ static void wifi_app_cb(uint8 u8MsgType, void * pvMsg)
 /* Handle the WIFI initialization state */
 static void wifi_state_init(void * ctx)
 {
+    #if BOARD == SAMG55_XPLAINED_PRO
+	ioport_set_pin_level(LED_0_PIN, IOPORT_PIN_LEVEL_LOW);
+	#elif BOARD == SAMD21_XPLAINED_PRO
+	port_pin_set_output_level(LED_0_PIN, false);
+	#endif
+	
     tstrWifiInitParam wifi_paramaters;
 
     /* Wait until the device has been "provisioned" or is configured to run */

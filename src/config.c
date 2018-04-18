@@ -46,10 +46,10 @@ const char      config_gcp_host_name[] = "mqtt.googleapis.com";
 /** Port of the mqtt service */
 const uint32_t  config_gcp_mqtt_port = 443;
 
-const char config_gcp_project_id[] = "<EXAMPLE_PROJECT_ID>";
-const char config_gcp_region_id[] = "<EXAMPLE_REGION_ID>";
-const char config_gcp_registry_id[] = "<EXAMPLE_REGISTRY_ID>";
-const char config_gcp_thing_id[] = "<EXAMPLE_DEVICE_ID>";
+const char config_gcp_project_id[] = "microchipgcp-e9571";
+const char config_gcp_region_id[] = "us-central1";
+const char config_gcp_registry_id[] = "microchipGCP";
+const char config_gcp_thing_id[] = "GCPDevice1";
 
 #endif /* CONFIG_USE_STATIC_CONFIG */
 
