@@ -2,15 +2,20 @@
 *.d
 
 # Object files
+*.bin
 *.o
 *.ko
 *.obj
 *.elf
+*.pyc
 
 # Linker output
 *.ilk
 *.map
 *.exp
+*.atsuo
+*.lss
+*.srec
 
 # Precompiled Headers
 *.gch

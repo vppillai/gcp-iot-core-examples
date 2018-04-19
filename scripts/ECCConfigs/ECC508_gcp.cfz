@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConfigZone>
+  <Sn0to1>01 23</Sn0to1>
+  <Sn2to3>6D 25</Sn2to3>
+  <RevNum>00 00 50 00</RevNum>
+  <Sn4to7>43 B2 AB 9D</Sn4to7>
+  <Sn8>EE</Sn8>
+  <Reserved13>C0</Reserved13>
+  <I2C_Enable>8D</I2C_Enable>
+  <Reserved15>00</Reserved15>
+  <I2C_Address>B0</I2C_Address>
+  <Reserved17>00</Reserved17>
+  <OTPmode>AA</OTPmode>
+  <ChipMode>00</ChipMode>
+  <SlotConfig00>8F 20</SlotConfig00>
+  <SlotConfig01>C4 44</SlotConfig01>
+  <SlotConfig02>87 20</SlotConfig02>
+  <SlotConfig03>C4 44</SlotConfig03>
+  <SlotConfig04>8F 0F</SlotConfig04>
+  <SlotConfig05>C4 26</SlotConfig05>
+  <SlotConfig06>9F 0F</SlotConfig06>
+  <SlotConfig07>8F 20</SlotConfig07>
+  <SlotConfig08>0F 0F</SlotConfig08>
+  <SlotConfig09>0F 0F</SlotConfig09>
+  <SlotConfig0A>0F 0F</SlotConfig0A>
+  <SlotConfig0B>0F 0F</SlotConfig0B>
+  <SlotConfig0C>0F 0F</SlotConfig0C>
+  <SlotConfig0D>0F 0F</SlotConfig0D>
+  <SlotConfig0E>0F 0F</SlotConfig0E>
+  <SlotConfig0F>0F 0F</SlotConfig0F>
+  <Counter0>FF FF FF FF 00 00 00 00</Counter0>
+  <Counter1>FF FF FF FF 00 00 00 00</Counter1>
+  <LastKeyUse>FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF</LastKeyUse>
+  <UserExtra>00</UserExtra>
+  <Selector>00</Selector>
+  <LockValue>00</LockValue>
+  <LockConfig>00</LockConfig>
+  <SlotLocked>FF FF</SlotLocked>
+  <Rfu90>00 00</Rfu90>
+  <X509Format>00</X509Format>
+  <X509Format>00</X509Format>
+  <X509Format>00</X509Format>
+  <X509Format>00</X509Format>
+  <KeyConfig00>33 00</KeyConfig00>
+  <KeyConfig01>1C 00</KeyConfig01>
+  <KeyConfig02>13 00</KeyConfig02>
+  <KeyConfig03>1C 00</KeyConfig03>
+  <KeyConfig04>3C 00</KeyConfig04>
+  <KeyConfig05>1C 00</KeyConfig05>
+  <KeyConfig06>3C 00</KeyConfig06>
+  <KeyConfig07>33 00</KeyConfig07>
+  <KeyConfig08>3C 00</KeyConfig08>
+  <KeyConfig09>3C 00</KeyConfig09>
+  <KeyConfig0A>3C 00</KeyConfig0A>
+  <KeyConfig0B>3C 00</KeyConfig0B>
+  <KeyConfig0C>3C 00</KeyConfig0C>
+  <KeyConfig0D>3C 00</KeyConfig0D>
+  <KeyConfig0E>3C 00</KeyConfig0E>
+  <KeyConfig0F>3C 00</KeyConfig0F>
+</ConfigZone>
