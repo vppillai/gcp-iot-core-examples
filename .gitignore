@@ -11,6 +11,7 @@
 
 # Linker output
 *.ilk
+*.eep
 *.map
 *.exp
 *.atsuo
